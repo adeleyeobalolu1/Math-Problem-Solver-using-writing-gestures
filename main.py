@@ -1,5 +1,4 @@
 import cv2
-import cvzone
 import numpy as np
 from PIL import Image
 import streamlit as st
@@ -79,7 +78,7 @@ def sendToModel(model, canvas, fingers):
         pil = Image.fromarray(canvas)
         response = model.generate_content(
             [
-                "Decode what i am writing and solve if it is a mathematical question, otherwise, let me know what it is",
+                "Solve the Math problem",
                 pil,
             ]
         )
